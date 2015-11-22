@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Französisch | 5A Best Class</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: black;
+            color:white;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: solid;
+        }
+
+        .card {
+            font-size: 250%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: solid;
+            text-align: center;
+            display: none;
+            cursor: pointer;
+            background-color: red;
+            position:absolute;
+            width: 300px;
+            left: 50%;
+            margin: 10px 0 10px -150px; /* half of the width  */
+
+            border-radius: 15px;
+        }
+
+        .menu {
+            text-align: center;
+            font-size: 200%;
+            padding: 10px 0 10px 0;
+        }
+
+        .language {
+            text-align: center;
+            margin: 10px 0 10px 0;
+            font-size: 150%;
+        }
+        
+        .language img {
+            margin: 0 1px 4px 1px;
+        }
+
+        .congrats {
+            cursor: pointer;
+            position:absolute;
+            left: 50%;
+        }
+
+    </style>
+
+    <script>
+        var germanToFrench = true;
+
+        function notecardClicked(currentElement) {
+            var thisCardId = Number(currentElement.id.substring(5));
+            var nextCardId = thisCardId + 1;
+            var nextElement = document.getElementById('card_' + nextCardId);
+
+            currentElement.style.display = 'none';
+            if (nextElement != null) {
+                nextElement.style.display = 'inherit';
+            } else {
+                var id = new Date().getMilliseconds() % 2;
+                document.getElementById('congrats_' + id).style.display = 'inherit';
+            }
+        }
+
+        function showFirstCard() {
+            document.getElementById('congrats_0').style.display = 'none';
+            document.getElementById('congrats_1').style.display = 'none';
+            document.getElementById('card_1').style.display = 'inherit';
+        }
+    </script>
+
+</head>
+<body onload="showFirstCard()">
+
+    <h1>5a Französisch</h1>
+
+    <div class="menu">
+        <span>Kapitel 1</span> | <a href="help.html">Hilfe</a>
+    </div>
+
+    <div class="language">
+        <img src="ch.svg" height="15px">DE &harr; FR<img src="fr.svg" height="15px">
+    </div>
+
+    <div id="card_1" class="card" onclick="notecardClicked(this)">en hiver...</div>
+    <div id="card_2" class="card" onclick="notecardClicked(this)">im Winter...</div>
+    <div id="card_3" class="card" onclick="notecardClicked(this)">en été...</div>
+    <div id="card_4" class="card" onclick="notecardClicked(this)">im Sommer...</div>
+    <div id="card_5" class="card" onclick="notecardClicked(this)">au mais de...</div>
+    <div id="card_6" class="card" onclick="notecardClicked(this)">im Monat...</div>
+    <div id="card_7" class="card" onclick="notecardClicked(this)">...a lieu...</div>
+    <div id="card_8" class="card" onclick="notecardClicked(this)">...findet... statt</div>
+    <div id="card_9" class="card" onclick="notecardClicked(this)">une evenment</div>
+    <div id="card_10" class="card" onclick="notecardClicked(this)">eine Veranstaltung</div>
+    <div id="card_11" class="card" onclick="notecardClicked(this)">une montagne</div>
+    <div id="card_12" class="card" onclick="notecardClicked(this)">ein Berg</div>
+    <div id="card_13" class="card" onclick="notecardClicked(this)">...se trouve</div>
+    <div id="card_14" class="card" onclick="notecardClicked(this)">....befindet sich...</div>
+    <div id="card_15" class="card" onclick="notecardClicked(this)">au printemps</div>
+    <div id="card_16" class="card" onclick="notecardClicked(this)">im Frühling</div>
+    <div id="card_17" class="card" onclick="notecardClicked(this)">en automne</div>
+    <div id="card_18" class="card" onclick="notecardClicked(this)">im Herbst</div>
+    <div id="card_19" class="card" onclick="notecardClicked(this)">un concours</div>
+    <div id="card_20" class="card" onclick="notecardClicked(this)">ein Wettbewerb</div>
+    <div id="card_21" class="card" onclick="notecardClicked(this)">une exposion</div>
+    <div id="card_22" class="card" onclick="notecardClicked(this)">eine Ausstellung</div>
+    <div id="card_23" class="card" onclick="notecardClicked(this)">extraoridinaire</div>
+    <div id="card_24" class="card" onclick="notecardClicked(this)">aussergewöhnlich, einzigartig</div>
+    <div id="card_25" class="card" onclick="notecardClicked(this)">une féte</div>
+    <div id="card_26" class="card" onclick="notecardClicked(this)">ein fest</div>
+    <div id="card_27" class="card" onclick="notecardClicked(this)">une curiosité</div>
+    <div id="card_28" class="card" onclick="notecardClicked(this)">eine sehenswürdigkeit</div>
+    <div id="card_29" class="card" onclick="notecardClicked(this)">entre...ét...</div>
+    <div id="card_30" class="card" onclick="notecardClicked(this)">zwischen... und...</div>
+    <div id="card_31" class="card" onclick="notecardClicked(this)">magnifique</div>
+    <div id="card_32" class="card" onclick="notecardClicked(this)">grossartig, wunderbar</div>
+    <div id="card_33" class="card" onclick="notecardClicked(this)">il s'agit d'un/d'une</div>
+    <div id="card_34" class="card" onclick="notecardClicked(this)">es handelt sich um...</div>
+
+    <div class="congrats" id="congrats_0" style="width: 152px; margin-left: -76px;">
+        <img align="middle" onclick="showFirstCard()" src="congrats1.gif">
+    </div>
+
+    <div class="congrats"  id="congrats_1" style="width: 88px; margin-left: -44px;">
+        <img align="middle" onclick="showFirstCard()" src="congrats2.gif">
+    </div>
+
+
+</body>
+</html>

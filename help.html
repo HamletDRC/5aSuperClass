@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Französisch | 5A Best Class</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: black;
+            color:white;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: solid;
+
+        }
+
+        .menu {
+            text-align: center;
+            font-size: 200%;
+            padding: 10px 0 10px 0;
+        }
+
+    </style>
+
+    <script>
+        var germanToFrench = true;
+
+        function notecardClicked(currentElement) {
+            var thisCardId = Number(currentElement.id.substring(5));
+            var nextCardId = thisCardId + 1;
+            var nextElement = document.getElementById('card_' + nextCardId);
+
+            currentElement.style.display = 'none';
+            if (nextElement != null) {
+                nextElement.style.display = 'inherit';
+            } else {
+                var id = new Date().getMilliseconds() % 2;
+                document.getElementById('congrats_' + id).style.display = 'inherit';
+            }
+        }
+
+        function showFirstCard() {
+            document.getElementById('congrats_0').style.display = 'none';
+            document.getElementById('congrats_1').style.display = 'none';
+            document.getElementById('card_1').style.display = 'inherit';
+        }
+    </script>
+
+</head>
+<body onload="showFirstCard()">
+
+    <h1>5a Französisch</h1>
+
+    <div class="menu">
+        <a href="index.html">Kapitel 1</a> | <span>Hilfe<span>
+    </div>
+
+    <div class="instructions">
+        <h2>Anweisungen</h2>
+        <p>
+            Übersetze das französische Wort auf Deutsch. Klicke das Kärtchen um deine Übersetzung zu korrigieren. <br>
+            Klicke das Kärtchen nochmals um zum nächsten Wort weiterzufahren. Wenn du fertig bist konnt ein smiley.<br>
+            Klicke auf den smiley um mit der Übung neu zu starten.
+            Die Webseite wird immer wieder aktualisiert, die nächsten Kärtchen die man in der 5en Klasse lernt geben ein 2tes,ein 3tes... <br>
+            Kapitel.
+        </p>
+    </div>
+
+
+
+</body>
+</html>
